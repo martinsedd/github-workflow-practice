@@ -2,6 +2,6 @@ Project Details - Version 1
  This file contains details about the project.
 
 
-############## New Feature ##############
+************** New Feature **************
 User model
 
