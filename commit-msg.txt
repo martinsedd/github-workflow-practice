@@ -1,0 +1,17 @@
+########## Code for the hook.
+
+COMMIT_MSG_FILE=$1
+
+FIRST_LINE=$(head -n1 "$COMMIT_MSG_FILE")
+
+PATTERN="^(feat|fix|docs|style|refactor|test|chore|ci)(\(.+\))?!?: .+"
+
+if ! [[ "$FIRST_LINE" =~ $PATTERN ]]; then
+  echo "ERROR: Your commit message title does not follow the Conventional Commits format." >&2
+  echo "       It should start with e.g., 'feat:', 'fix:', 'docs:', etc." >&2
+  echo "       Example: 'feat: Add user login functionality'" >&2
+  echo "       Your message title: '$FIRST_LINE'" >&2
+  exit 1
+fi
+
+exit 0
