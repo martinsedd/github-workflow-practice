@@ -5,4 +5,4 @@ Project Details - Version 1
 ************** New Feature **************
 User model
 User repository
-
+User service
